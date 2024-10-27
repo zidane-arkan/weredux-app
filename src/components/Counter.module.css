@@ -15,6 +15,14 @@
   font-size: 1rem;
 }
 
+.counterBox {
+  display: flex;
+  margin: 1rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .value {
   font-size: 2rem;
   color: #3c0080;
