@@ -8,6 +8,7 @@ const Counter = () => {
   };
 
   const incrementHandler = () => dispatch({ type: "increment" });
+  const increaseByTen = () => dispatch({ type: "increase", value: 10 });
   const decrementHandler = () => dispatch({ type: "decrement" });
 
   const count = useSelector((state) => state.count);
@@ -19,6 +20,7 @@ const Counter = () => {
       {tooggleCounter && (
         <div className={classes.counterBox}>
           <button onClick={incrementHandler}>+</button>
+          <button onClick={increaseByTen}>+ 10</button>
           <button onClick={decrementHandler}>-</button>
         </div>
       )}
