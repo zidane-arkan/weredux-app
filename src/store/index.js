@@ -3,9 +3,23 @@ import { legacy_createStore as createStore } from "redux";
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = { count: 0, showCounter: false };
-createSlice({
+const counterSlice = createSlice({
   name: "counter",
   initialState,
+  reducers: {
+    increment(state) {
+      state.count++;
+    },
+    decrement(state) {
+      state.count--;
+    },
+    increase(state, action) {
+      state.count += action.value;
+    },
+    toogle(state) {
+      state.showCounter = !state.showCounter;
+    },
+  },
 });
 
 const counterReducer = (state = initialState, action) => {
