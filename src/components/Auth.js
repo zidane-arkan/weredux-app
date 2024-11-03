@@ -4,9 +4,7 @@ import { authActions } from "../store";
 import classes from "./Auth.module.css";
 const Auth = () => {
   const dispatch = useDispatch();
-  const authenticated = useSelector(
-    (state) => state.authentication.isAuthenticated
-  );
+
   const handleLogin = (e) => {
     e.preventDefault();
     dispatch(authActions.login());
@@ -26,7 +24,7 @@ const Auth = () => {
           <button>Login</button>
         </form>
       </section>
-      {authenticated && <p>Redirect to Home Page...</p>}
+      {/* {authenticated && <p>Redirect to Home Page...</p>} */}
     </main>
   );
 };
